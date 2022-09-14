@@ -1,12 +1,15 @@
 import { FC } from "react";
+import { Navigation } from "../Nav";
 
 type Props = {
-    showNav?: boolean
+    hideNav?: boolean
 }
 
-const Header:FC<Props> = ({showNav}) => {
+const Header: FC<Props> = ({ hideNav }) => {
     return (
-        <header></header>
+        <header>
+            {!hideNav && <Navigation></Navigation>}
+        </header>
     );
 }
 

@@ -4,11 +4,11 @@ import { Header } from "../Header";
 
 type Children = {
     children: ReactNode
-    showNav?: boolean
+    hideNav?: boolean
 }
 
 
-const Layout:FC<Children> = ({children, showNav}) => {
+const Layout:FC<Children> = ({children, hideNav}) => {
     return (
         <>
             <Header/>
