@@ -12,7 +12,7 @@ const Layout:FC<Children> = ({children, hideNav}) => {
     return (
         <>
             <Header/>
-            <main>
+            <main className="main">
                 {children}
             </main>
             <Footer></Footer>
