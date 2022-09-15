@@ -8,7 +8,7 @@ type Props = {
 const Header: FC<Props> = ({ hideNav }) => {
     return (
         <header className="header">
-            {!hideNav && <Navigation></Navigation>}
+            <Navigation hideNav={hideNav}></Navigation>
         </header>
     );
 }

@@ -1,8 +1,13 @@
+import { FC } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+type Props = {
+    hideNav?: boolean
+}
 
-const Navigation = () => {
+
+const Navigation:FC<Props> = ({hideNav}) => {
     return (
         <Navbar>
             <Navbar.Brand>
@@ -15,10 +20,11 @@ const Navigation = () => {
                 />
                 <h1>Kpelis</h1>
             </Navbar.Brand>
+            {!hideNav && 
             <Nav>
-                <Nav.Link>Publicaciones</Nav.Link>
-                <Nav.Link>Recomendaciones</Nav.Link>
-            </Nav>
+                <Nav.Link href='/'>Publicaciones</Nav.Link>
+                <Nav.Link href='/recomend'>Recomendaciones</Nav.Link>
+            </Nav>}
         </Navbar>
     )
 }
