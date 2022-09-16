@@ -16,11 +16,11 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Outlet />}>
-        <Route index element={<Home />}></Route>
-        <Route path="login" element={<Login />}></Route>
-        <Route path="signup" element={<SignUp />}></Route>
-        <Route path="recomend" element={<Recomend />}></Route>
-        <Route path="user" element={<User />}></Route>
+        <Route index element={<Home />} />
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
+        <Route path="recomend" element={<Recomend />} />
+        <Route path="user" element={<User />} />
       </Route>
     </Routes>
   </BrowserRouter>
