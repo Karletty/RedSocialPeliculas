@@ -38,8 +38,15 @@
         padding: 10px 15px;
         box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
     }
+    .navbar-expand .navbar-nav .nav-link.user {
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
 }
-
 
 .main {
     flex: 1;
@@ -49,3 +56,13 @@
     display: flex;
     align-items: center;
 }
+
+.navbar {
+    width: 100%;
+}
+
+.justify-end{
+    position: absolute;
+    right: 0;
+}
+

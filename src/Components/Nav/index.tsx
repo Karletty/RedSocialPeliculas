@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { FC } from "react";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 type Props = {
     hideNav?: boolean
@@ -22,8 +22,11 @@ const Navigation:FC<Props> = ({hideNav}) => {
             </Navbar.Brand>
             {!hideNav && 
             <Nav>
-                <Nav.Link href='/'>Publicaciones</Nav.Link>
-                <Nav.Link href='/recomend'>Recomendaciones</Nav.Link>
+                <Nav.Link href="/">Publicaciones</Nav.Link>
+                <Nav.Link href="/recomend">Recomendaciones</Nav.Link>
+                <Nav.Link href="/user" className="justify-end user">
+                    <i className="fa-solid fa-user"></i>
+                </Nav.Link>
             </Nav>}
         </Navbar>
     )
