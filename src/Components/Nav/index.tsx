@@ -1,25 +1,16 @@
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Nav from "react-bootstrap/Nav";
+import { NavLink } from "react-router-dom";
 
 
 const Navigation = () => {
     return (
-        <Navbar>
-            <Navbar.Brand>
-                <img
-                    alt=""
-                    src="./logo.png"
-                    width="40"
-                    height="40"
-                    className="d-inline-block align-top"
-                />
-                <h1>Kpelis</h1>
-            </Navbar.Brand>
-            <Nav>
-                <Nav.Link>Publicaciones</Nav.Link>
-                <Nav.Link>Recomendaciones</Nav.Link>
-            </Nav>
-        </Navbar>
+        <Nav>
+            <NavLink to="/" className="nav-link">Publicaciones</NavLink>
+            <NavLink to="/recomend" className="nav-link">Recomendaciones</NavLink>
+            <NavLink to="/user" className="justify-end user nav-link">
+                <i className="fa-solid fa-user"></i>
+            </NavLink>
+        </Nav>
     )
 }
 export { Navigation }

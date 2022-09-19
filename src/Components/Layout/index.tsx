@@ -11,7 +11,7 @@ type Children = {
 const Layout:FC<Children> = ({children, hideNav}) => {
     return (
         <>
-            <Header/>
+            <Header hideNav={hideNav}/>
             <main className="main">
                 {children}
             </main>
