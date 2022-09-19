@@ -1,13 +1,8 @@
-import { FC } from "react";
 import Nav from "react-bootstrap/Nav";
 import { NavLink } from "react-router-dom";
 
-type Props = {
-    hideNav?: boolean
-}
 
-
-const Navigation: FC<Props> = () => {
+const Navigation = () => {
     return (
         <Nav>
             <NavLink to="/" className="nav-link">Publicaciones</NavLink>

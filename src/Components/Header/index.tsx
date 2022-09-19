@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Navigation } from "../Nav";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 type Props = {
@@ -22,7 +21,7 @@ const Header: FC<Props> = ({ hideNav }) => {
                     <h1>Kpelis</h1>
                 </Navbar.Brand>
                 {!hideNav &&
-                    <Navigation hideNav={hideNav}></Navigation>}
+                    <Navigation></Navigation>}
             </Navbar>
         </header>
     );
