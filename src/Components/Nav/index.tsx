@@ -1,34 +1,21 @@
 import { FC } from "react";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { NavLink } from "react-router-dom";
 
 type Props = {
     hideNav?: boolean
 }
 
 
-const Navigation:FC<Props> = ({hideNav}) => {
+const Navigation: FC<Props> = () => {
     return (
-        <Navbar>
-            <Navbar.Brand>
-                <img
-                    alt=""
-                    src="./logo.png"
-                    width="40"
-                    height="40"
-                    className="d-inline-block align-top"
-                />
-                <h1>Kpelis</h1>
-            </Navbar.Brand>
-            {!hideNav && 
-            <Nav>
-                <Nav.Link href="/">Publicaciones</Nav.Link>
-                <Nav.Link href="/recomend">Recomendaciones</Nav.Link>
-                <Nav.Link href="/user" className="justify-end user">
-                    <i className="fa-solid fa-user"></i>
-                </Nav.Link>
-            </Nav>}
-        </Navbar>
+        <Nav>
+            <NavLink to="/" className="nav-link">Publicaciones</NavLink>
+            <NavLink to="/recomend" className="nav-link">Recomendaciones</NavLink>
+            <NavLink to="/user" className="justify-end user nav-link">
+                <i className="fa-solid fa-user"></i>
+            </NavLink>
+        </Nav>
     )
 }
 export { Navigation }

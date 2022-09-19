@@ -1,5 +1,7 @@
 import { FC } from "react";
 import { Navigation } from "../Nav";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 type Props = {
     hideNav?: boolean
@@ -8,7 +10,20 @@ type Props = {
 const Header: FC<Props> = ({ hideNav }) => {
     return (
         <header className="header">
-            <Navigation hideNav={hideNav}></Navigation>
+            <Navbar>
+                <Navbar.Brand>
+                    <img
+                        alt=""
+                        src="./logo.png"
+                        width="40"
+                        height="40"
+                        className="d-inline-block align-top"
+                    />
+                    <h1>Kpelis</h1>
+                </Navbar.Brand>
+                {!hideNav &&
+                    <Navigation hideNav={hideNav}></Navigation>}
+            </Navbar>
         </header>
     );
 }
